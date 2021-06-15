@@ -13,6 +13,7 @@ class BookController {
     }
 
     async store(req, res) {
+        console.log(req.body)
         const book = await Book.create(req.body)
         res.json({ data: book })
     }
