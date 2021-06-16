@@ -11,7 +11,7 @@ const routes = new Router();
 
 routes.get('/books', BookController.index)
 routes.post('/books', validateBookStore, BookController.store)
-routes.get('/books/:id', BookController.bookDetails)
+routes.get('/book/:id', BookController.bookDetails)
 
 
 
