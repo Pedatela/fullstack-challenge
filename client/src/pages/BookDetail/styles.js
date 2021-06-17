@@ -44,7 +44,7 @@ export const BookTitle = styled.div`
 
 export const Author = styled.span`
     position: absolute;
-    width: 70px;
+    width: 100px;
     height: 19px;
     left: 20px;
     top: 414px;
@@ -60,7 +60,7 @@ export const BookDescription = styled.div`
     width: 335px;
     height: 275px;
     left: 20px;
-    top: 443px;
+    top: 460px;
     font-family: SFProText;
     font-size: 14px;
     line-height: 25px;

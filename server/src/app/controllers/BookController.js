@@ -8,14 +8,13 @@ class BookController {
         if (req.query.search)
             where = { name: { [Op.like]: `%${req.query.search}%` } }
 
-        const books = await Book.findAll({ where })
+        const books = await Book.findAndCountAll({ limit: req.query.limit, where, offset: req.query.offset, order: [['id', 'ASC']] })
         res.json({ data: books })
     }
 
     async store(req, res) {
-        console.log(req.body)
-        const book = await Book.create(req.body)
-        res.json({ data: book })
+        const book = await Book.create(req.body).catch(err => console.log(err))
+        res.json({ data: book, message: "The Book was successfully created" })
     }
 
     async bookDetails(req, res) {

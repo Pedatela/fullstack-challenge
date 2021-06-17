@@ -1,8 +1,8 @@
 import api from './index.js';
 // eslint-disable-next-line
 export default {
-    getAll() {
-        return api.get('/books')
+    getAll(limit = 5, offset) {
+        return api.get('/books', { params: { limit, offset } })
     },
 
     getOne(bookId) {
