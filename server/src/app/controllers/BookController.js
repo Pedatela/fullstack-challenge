@@ -14,12 +14,15 @@ class BookController {
 
     async store(req, res) {
         const book = await Book.create(req.body).catch(err => console.log(err))
-        res.json({ data: book, message: "The Book was successfully created" })
+        res.status(201).json({ data: book, message: "The Book was successfully created" })
     }
 
     async bookDetails(req, res) {
         const book = await Book.findOne({ where: { id: req.params.id } })
-        res.json({ data: book })
+        if (!book) {
+            return res.status(404).json({ data: 'Book not found' }).status(404)
+        }
+        return res.json({ data: book })
     }
 }
 

@@ -1,11 +1,13 @@
-require('dotenv').config
+require('../bootstrap')
+
 module.exports = {
-    dialect: 'postgres',
-    host: "127.0.0.1",
-    username: "postgres",
+    dialect: process.env.DB_DIALECT || 'postgres',
+    host: process.env.DB_HOST,
+    username: process.env.DB_USER,
     port: 5432,
-    password: "lucasspc",
-    database: "noia_challenge",
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+    storage: './__tests__/database.sqlite',
     define: {
         timestamp: true,
         underscored: true,

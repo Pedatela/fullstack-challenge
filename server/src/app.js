@@ -1,4 +1,5 @@
-import 'dotenv/config'
+import './bootstrap'
+
 import 'express-async-errors'
 import Youch from 'youch'
 import cors from 'cors'
