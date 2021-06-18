@@ -1,8 +1,15 @@
 import React, { useState } from 'react';
 import { toast } from 'react-toastify'
+import { AiOutlineHome, AiOutlinePlus, AiOutlineUser } from "react-icons/ai";
+import { Link } from 'react-router-dom'
 
 
-import { Container, Title, LabelName, InputName, LabelAuthor, InputAuthor, LabelDescription, InputDescription, AddButton, LabelCover, InputCover } from './styles';
+
+import {
+    Container, Title, LabelName, InputName, LabelAuthor, InputAuthor,
+    LabelDescription, InputDescription, AddButton, LabelCover, InputCover,
+    Navigation, Home, HomeIcon, NewBookContainer, NewBookIcon, Profile, ProfileIcon
+} from './styles';
 
 import BookApi from '../../api/Book';
 
@@ -17,7 +24,8 @@ function NewBook() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        let { data } = await BookApi.create(form).catch(err => toast.error(err))
+        let { data } = await BookApi.create(form)
+        setForm({ name: '', image: '', author: '', description: '' })
         toast.success(data.message)
     }
 
@@ -43,22 +51,41 @@ function NewBook() {
                 <LabelName>
                     Name:
                 </LabelName>
-                <InputName required type="text" onChange={(event) => setForm({ ...form, name: event.target.value })} />
+                <InputName value={form.name} required type="text" onChange={(event) => setForm({ ...form, name: event.target.value })} />
 
                 <LabelAuthor>
                     Author:
                 </LabelAuthor>
-                <InputAuthor required type="text" onChange={(event) => setForm({ ...form, author: event.target.value })} />
+                <InputAuthor vvalue={form.author} required type="text" onChange={(event) => setForm({ ...form, author: event.target.value })} />
                 <LabelDescription>
                     Description:
                 </LabelDescription>
-                <InputDescription required type="text" onChange={(event) => setForm({ ...form, description: event.target.value })} />
+                <InputDescription value={form.description} required type="text" onChange={(event) => setForm({ ...form, description: event.target.value })} />
                 <LabelCover>
                     Cover:
                 </LabelCover>
                 <InputCover required type="file" onChange={convertFile} />
                 <AddButton>Add new Book</AddButton>
             </form>
+
+            <Navigation>
+                <Link to={`/books`}>
+                    <Home>
+                        <HomeIcon><AiOutlineHome /></HomeIcon>
+                        <p>Home</p>
+                    </Home>
+                </Link>
+                <Link to={`/new/book`}>
+                    <NewBookContainer>
+                        <NewBookIcon><AiOutlinePlus /></NewBookIcon>
+                        <p>Add Book</p>
+                    </NewBookContainer>
+                </Link>
+                <Profile>
+                    <ProfileIcon><AiOutlineUser /></ProfileIcon>
+                    <p>Profile</p>
+                </Profile>
+            </Navigation>
 
         </Container >
     );

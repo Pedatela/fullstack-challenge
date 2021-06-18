@@ -7,6 +7,15 @@ export const Container = styled.div`
     left: -1px;
     top: 0px;
     background: #FFFCF9;
+
+    svg{
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        left: 0%;
+        bottom: 89%;
+        font-size: large;
+    }
 `;
 
 export const Search = styled.input`
@@ -64,6 +73,7 @@ export const ImageContainer = styled.div`
     top: 25%;
     max-width: 376px;
     margin: 0 10px;
+    padding-bottom: 10%;
     display: grid;
     grid-gap: 5px;
     grid-template-columns: repeat(3, 1fr);
@@ -89,4 +99,90 @@ export const BookAuthor = styled.span`
     font-size: 10px;
     line-height: 12px;
     color: rgba(49, 49, 49, 0.8);
+`
+
+export const LoadMore = styled.button`
+    height: 20px;
+    align-self: center;
+    box-shadow: 5px 5px 80px rgba(212, 173, 134, 0.4926);
+    border-radius: 10px;
+    border: 0;
+    line-height: 13px;
+
+    background: ${props => props.disabled ? 'grey' : '#FF6978'};
+    color: #FFFFFF;
+`
+
+export const Navigation = styled.div`
+    position: fixed;
+    width: 375px;
+    height: 59px;
+    left: 0px;
+    bottom: 0%;
+    background: #FFFFFF;
+`
+
+export const Home = styled.div`
+   position: absolute;
+    height: 12px;
+    left: 10%;
+    right: 0%;
+    top: calc(50% - 25px/2 + 14px);
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+`
+
+export const HomeIcon = styled.div`
+    position: absolute;
+    font-size: 18px;
+    left: 1.1%;
+    right: 0%;
+    top: calc(50% - 80px/2 + 14px);
+`
+
+export const NewBook = styled.div`
+    position: absolute;
+    height: 12px;
+    left: 42%;
+    right: 0%;
+    top: calc(50% - 25px/2 + 14px);
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+    color: #BFBEBF;
+`
+
+export const NewBookIcon = styled.div`
+    position: absolute;
+    font-size: 18px;
+    left: 5.6%;
+    right: 0%;
+    top: calc(50% - 80px/2 + 14px);
+`
+
+export const Profile = styled.div`
+   position: absolute;
+    height: 12px;
+    left: 80%;
+    right: 0%;
+    top: calc(50% - 25px/2 + 14px);
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+    color: #BFBEBF;
+`
+
+export const ProfileIcon = styled.div`
+   position: absolute;
+    font-size: 18px;
+    left: 5.6%;
+    right: 0%;
+    top: calc(50% - 80px/2 + 14px);
 `

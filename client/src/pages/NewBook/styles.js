@@ -139,3 +139,78 @@ export const AddButton = styled.button`
     color: #FFFFFF;
 
 `;
+
+export const Navigation = styled.div`
+    position: fixed;
+    width: 375px;
+    height: 59px;
+    left: 0px;
+    bottom: 0%;
+    background: #FFFFFF;
+`
+
+export const Home = styled.div`
+   position: absolute;
+    height: 12px;
+    left: 10%;
+    right: 0%;
+    top: calc(50% - 25px/2 + 14px);
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+    color: #BFBEBF;
+
+`
+
+export const HomeIcon = styled.div`
+    position: absolute;
+    font-size: 18px;
+    left: 1.1%;
+    right: 0%;
+    top: calc(50% - 80px/2 + 14px);
+`
+
+export const NewBookContainer = styled.div`
+    position: absolute;
+    height: 12px;
+    left: 42%;
+    right: 0%;
+    top: calc(50% - 25px/2 + 14px);
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+`
+
+export const NewBookIcon = styled.div`
+    position: absolute;
+    font-size: 18px;
+    left: 5.6%;
+    right: 0%;
+    top: calc(50% - 80px/2 + 14px);
+`
+
+export const Profile = styled.div`
+   position: absolute;
+    height: 12px;
+    left: 80%;
+    right: 0%;
+    top: calc(50% - 25px/2 + 14px);
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+    color: #BFBEBF;
+`
+
+export const ProfileIcon = styled.div`
+   position: absolute;
+    font-size: 18px;
+    left: 5.6%;
+    right: 0%;
+    top: calc(50% - 80px/2 + 14px);
+`
