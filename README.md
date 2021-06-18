@@ -1,3 +1,14 @@
+# Getting Start 
+  - Use node 12
+
+ # Commands
+ - Open server folder in terminal run `npm i && npm start`
+ - Open client folder in terminal run `npm i && npm start`
+
+
+
+
+
 # Fullstack Challenge
 
 Clone this repository and start our challenge **right now**.
