@@ -15,6 +15,9 @@ cd example/server
 # Install packages
 npm install or yarn install
 
+# Run Migrates
+npx sequelize db:migrate or yarn sequelize db:migrate 
+
 # Run tests
 npm test or yarn test
 
