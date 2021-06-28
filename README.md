@@ -1,8 +1,44 @@
-# Getting Start 
-  - Use node 12
+# Installation
 
- # Commands
- - If you want to run automated test, open server folder in terminal and run  `npm test`
- - Open server folder in terminal run `npm i && npm start`
- - Open client folder in terminal run `npm i && npm start`
+```bash
+# Download repository
+git clone https://github.com/Pedatela/fullstack-challenge.git
+```
 
+## Backend
+```bash
+# Install node 12 
+
+# Access the director: server 
+cd example/server
+
+# Install packages
+npm install or yarn install
+
+# Run tests
+npm test or yarn test
+
+# Run server (backend)
+npm start or yarn start
+
+# Server is runnin on: http://localhost:3333/
+```
+
+## Frontend - React
+```bash
+# Instalar nvm (https://github.com/creationix/nvm#install-script)
+
+# Install node 12 
+nvm install stable
+
+# # Access the director: client 
+cd example/client
+
+# Install packages
+npm install or yarn install
+
+# Run client (frontend)
+npm start or yarn start
+
+# Client is runnin on: http://localhost:3000/
+```
