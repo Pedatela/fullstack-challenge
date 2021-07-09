@@ -18,6 +18,13 @@ npm install or yarn install
 # Run Migrates
 npx sequelize db:migrate or yarn sequelize db:migrate 
 
+# Access the director: server/src/script/database/script; 
+# Copy the SQL file and run it
+psql postgres -h <YOUR HOST> -d <YOUR DB_NAME> -a -f Insert-Books.sql or 
+open your database manager (pgAdmin or Postico) and copy the file content, 
+paste it in your database manager and run it.
+
+
 # Run tests
 npm test or yarn test
 
